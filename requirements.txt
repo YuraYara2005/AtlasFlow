@@ -1,0 +1,18 @@
+# --- Core Data Processing ---
+numpy>=1.24.0          # Essential for Tensor encoding and array manipulation
+pandas>=2.0.0         # Useful for structured data analysis and CSV handling
+scikit-learn>=1.2.0    # For scaling features (MinMaxScaler) and encoding
+
+# --- Streaming & Ingestion ---
+confluent-kafka>=2.0.0 # Client for Kafka-backed streams
+python-dotenv>=1.0.0   # For managing secrets (Kafka API keys, etc.)
+
+# --- Development & Testing ---
+faker>=18.0.0          # Optional: generate even more realistic synthetic data
+pytest>=7.0.0          # For unit testing your pipeline
+black>=23.0.0          # Standard code formatter (Amazon-style)
+mypy>=1.0.0            # Static type checking to catch bugs early
+
+# --- Visualization (Phase 5 Prep) ---
+matplotlib>=3.7.0      # For plotting training loss and warehouse patterns
+torch>=2.0.0
