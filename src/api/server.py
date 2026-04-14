@@ -75,7 +75,7 @@ _state: Dict[str, Any] = {}
 # ---------------------------------------------------------------------------
 
 @asynccontextmanager
-async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
+async def lifespan(_app: FastAPI) -> AsyncGenerator[None, None]:
     """
     FastAPI lifespan context manager.
 
@@ -116,9 +116,8 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     # flan-t5-small is lightweight and runs comfortably on CPU.
     # We use text2text-generation (encoder-decoder) so the model can follow
     # structured prompts and output clean imperative sentences.
-    logger.info("Loading Hugging Face flan-t5-small…")
     _state["hf_generator"] = hf_pipeline(
-        "text2text-generation",
+        "text-generation",
         model="google/flan-t5-small",
     )
     logger.info("Hugging Face pipeline ready.")
