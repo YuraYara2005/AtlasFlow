@@ -1,0 +1,17 @@
+# config/model_config.yaml
+# AtlasFlow Pipeline Hyperparameters
+
+pipeline:
+  window_size: 5
+  confidence_threshold: 0.0
+
+model_architecture:
+  feature_dim: 4
+  embed_dim: 64
+  num_heads: 4
+  hidden_dim: 32
+  num_classes: 3
+
+generation:
+  hf_model_name: "google/flan-t5-small"
+  max_new_tokens: 80
