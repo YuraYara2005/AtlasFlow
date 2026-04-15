@@ -1,0 +1,13 @@
+# Python junk
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Node junk
+node_modules/
+dist/
+.eslintcache
+
+# Vite/System
+.DS_Store
